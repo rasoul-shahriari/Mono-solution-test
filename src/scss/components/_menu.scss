@@ -1,0 +1,58 @@
+.menu {
+  overflow: hidden;
+  background-color: $color-black-50;
+
+  &__link {
+    float: left;
+    display: block;
+    color: $color-silver;
+    text-align: center;
+    padding: rem(14) rem(16);
+    text-decoration: none;
+    font-size: rem(17);
+
+    &:hover,
+    &:focus {
+      background-color: $color-silver;
+      color: black;
+      text-decoration: none;
+    }
+
+    &--language {
+      float: right;
+    }
+
+    &--icon {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: rem(600)) {
+  .menu__link:not(:first-child) {
+    display: none;
+  }
+
+  .menu .menu__link--icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: rem(600)) {
+  .menu.active {
+    position: relative;
+  }
+
+  .menu.active .menu__link--icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .menu.active .menu__link {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}

@@ -1,0 +1,99 @@
+.form {
+  font-family: 'Open Sans Condensed', arial, sans;
+  width: rem(500);
+  padding: rem(50);
+  background: $color-white;
+  margin: rem(50) auto;
+  box-shadow: 0 0 rem(16) rgba($color-black, 0.22);
+  -moz-box-shadow: 0px 0px rem(16) rgba($color-black, 0.22);
+  -webkit-box-shadow:  0px 0px rem(16) rgba($color-black, 0.22);
+
+  &__header {
+    background: $color-black-50;
+    text-transform: uppercase;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #797979;
+    font-size: rem(18);
+    font-weight: 100;
+    padding: rem(20);
+    margin: -30px -30px 30px -30px;
+  }
+
+  &__input,
+  &__select {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    display: block;
+    width: 100%;
+    padding: rem(8);
+    border: none;
+    border-bottom: 1px solid $color-silver;
+    background: transparent;
+    margin-bottom: rem(10);
+    height: rem(45);
+
+    &:focus {
+      padding: 3%;
+      border-bottom: 1px solid $color-black-50;
+    }
+  }
+
+  &__field-wrapper {
+    padding-top: rem(20);
+  }
+
+  &__checkbox-label {
+    padding-right: rem(20);
+  }
+
+  &__checkbox {
+    width: rem(21);
+    display: inline;
+    margin: 0;
+    vertical-align: bottom;
+    margin-left: rem(20);
+  }
+
+  &__button {
+    background-color: $color-green-50;
+    border: 1px solid $color-green;
+    display: inline-block;
+    cursor: pointer;
+    color: $color-white;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: rem(14);
+    padding: rem(8) rem(18);
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-right: rem(20);
+
+    &:hover,
+    &:focus {
+      background:linear-gradient(to bottom, $color-green 5%, lighten($color-green, 10%) 100%);
+    }
+
+    &--red {
+      background-color: $color-red;
+      border: 1px solid $color-red;
+
+      &:hover,
+      &:focus {
+        background:linear-gradient(to bottom, $color-red 5%, lighten($color-red, 10%) 100%);
+        color: $color-white;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .form__error {
+    color: $color-red;
+  }
+}
+
+@media screen and (max-width: rem(600)) {
+  .form {
+    width: 95%;
+  }
+}

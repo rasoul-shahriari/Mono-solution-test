@@ -7,10 +7,10 @@ const ROOT_URL = "http://reduxblog.herokuapp.com/api";
 const API_KEY = "?key=PAPERCLIPFFF";
 
 export function switchLanguage(language) {
-	return {
-		type: SWITCH_LANGUAGE,
-		language
-	}
+    return {
+        type: SWITCH_LANGUAGE,
+        language
+    }
 }
 
 export function createUser(values, callback) {

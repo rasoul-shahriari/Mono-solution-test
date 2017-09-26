@@ -1,7 +1,7 @@
 {
   "name": "MonoSolution-test",
   "version": "1.0.0",
-  "description": "trustpilot's widget",
+  "description": "mono's multi language test",
   "main": "index.js",
   "scripts": {
     "production": "webpack -p",
